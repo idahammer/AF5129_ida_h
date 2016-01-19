@@ -1,16 +1,13 @@
-package assignment_1;
-
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Color;
-import javax.swing.border.BevelBorder;
-import javax.swing.UIManager;
 
-public class Main extends JFrame {
+public class main extends JFrame {
+
+	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -19,7 +16,7 @@ public class Main extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Main frame = new Main();
+					main frame = new main();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,11 +28,13 @@ public class Main extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Main() {
-		getContentPane().setBackground(UIManager.getColor("List.selectionBackground"));
+	public main() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		getContentPane().setLayout(null);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
 	}
 
 }
