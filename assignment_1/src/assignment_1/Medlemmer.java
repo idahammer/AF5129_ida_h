@@ -1,3 +1,5 @@
+package assignment_1;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -5,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class main extends JFrame {
+public class Medlemmer extends JFrame {
 
 	private JPanel contentPane;
 
@@ -16,7 +18,7 @@ public class main extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					main frame = new main();
+					Medlemmer frame = new Medlemmer();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -28,7 +30,7 @@ public class main extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public main() {
+	public Medlemmer() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
