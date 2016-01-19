@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JButton;
 
 public class main extends JFrame {
 
@@ -34,9 +38,33 @@ public class main extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel heading = new JLabel("Fat 2 fit fitness");
+		heading.setFont(new Font("Modern No. 20", Font.PLAIN, 38));
+		heading.setForeground(Color.WHITE);
+		heading.setBounds(110, 0, 244, 60);
+		contentPane.add(heading);
+		
+		JButton btnArkiv = new JButton("ARKIV");
+		btnArkiv.setBounds(16, 89, 117, 29);
+		contentPane.add(btnArkiv);
+		
+		JButton btnMedlemmer = new JButton("MEDLEMMER");
+		btnMedlemmer.setBounds(168, 89, 117, 29);
+		contentPane.add(btnMedlemmer);
+		
+		JButton btnHjlp = new JButton("HJÆLP");
+		btnHjlp.setBounds(316, 89, 117, 29);
+		contentPane.add(btnHjlp);
+		
+		JLabel lblInternt = new JLabel("- Internt");
+		lblInternt.setFont(new Font("Modern No. 20", Font.PLAIN, 25));
+		lblInternt.setForeground(Color.WHITE);
+		lblInternt.setBounds(168, 49, 169, 22);
+		contentPane.add(lblInternt);
 	}
-
 }
