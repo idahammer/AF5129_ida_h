@@ -10,6 +10,8 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class main extends JFrame {
 
@@ -50,14 +52,22 @@ public class main extends JFrame {
 		contentPane.add(heading);
 		
 		JButton btnArkiv = new JButton("ARKIV");
+		btnArkiv.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnArkiv.setBackground(Color.WHITE);
 		btnArkiv.setBounds(16, 89, 117, 29);
 		contentPane.add(btnArkiv);
 		
 		JButton btnMedlemmer = new JButton("MEDLEMMER");
+		btnMedlemmer.setBackground(Color.WHITE);
 		btnMedlemmer.setBounds(168, 89, 117, 29);
 		contentPane.add(btnMedlemmer);
 		
 		JButton btnHjlp = new JButton("HJÆLP");
+		btnHjlp.setBackground(Color.WHITE);
 		btnHjlp.setBounds(316, 89, 117, 29);
 		contentPane.add(btnHjlp);
 		
