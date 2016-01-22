@@ -25,10 +25,17 @@ import javax.swing.JPopupMenu;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JTextField;
+import java.awt.Insets;
 
 public class main extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -81,6 +88,7 @@ public class main extends JFrame {
 		contentPane.add(btnUdskriv);
 		
 		JMenuBar menuBar = new JMenuBar();
+		menuBar.setMargin(new Insets(1, 1, 1, 1));
 		menuBar.setBounds(0, 0, 132, 22);
 		contentPane.add(menuBar);
 		
@@ -100,6 +108,7 @@ public class main extends JFrame {
 		mnEksisterendeMedlemmer.add(mntmRedigr);
 		
 		JLabel lblNewLabel = new JLabel("Navn:");
+		lblNewLabel.setBackground(Color.WHITE);
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setBounds(123, 121, 61, 16);
 		contentPane.add(lblNewLabel);
@@ -123,6 +132,45 @@ public class main extends JFrame {
 		lblNewLabel_4.setForeground(Color.WHITE);
 		lblNewLabel_4.setBounds(123, 233, 61, 16);
 		contentPane.add(lblNewLabel_4);
+		
+		textField = new JTextField();
+		textField.setBounds(187, 116, 130, 26);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(187, 144, 130, 26);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(187, 172, 130, 26);
+		contentPane.add(textField_2);
+		textField_2.setColumns(10);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(187, 200, 130, 26);
+		contentPane.add(textField_3);
+		textField_3.setColumns(10);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(187, 228, 130, 26);
+		contentPane.add(textField_4);
+		textField_4.setColumns(10);
+		
+		JButton btnGemndringer = new JButton("Gem Ændringer");
+		btnGemndringer.setBounds(314, 243, 132, 29);
+		contentPane.add(btnGemndringer);
+		
+		JLabel lblNewLabel_5 = new JLabel("New label");
+		lblNewLabel_5.setBounds(348, 89, 96, 137);
+		contentPane.add(lblNewLabel_5);
+		
+		JLabel lblFatFitness = new JLabel("Fat 2 Fitness");
+		lblFatFitness.setFont(new Font("Modern No. 20", Font.PLAIN, 40));
+		lblFatFitness.setForeground(Color.WHITE);
+		lblFatFitness.setBounds(227, 6, 219, 44);
+		contentPane.add(lblFatFitness);
 	}
 	private static void addPopup(Component component, final JPopupMenu popup) {
 	}
