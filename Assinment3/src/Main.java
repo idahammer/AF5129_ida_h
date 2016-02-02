@@ -4,13 +4,13 @@ public class Main {
 public static void main(String [] args) {
 	
 	ArrayList<Bike> myBikes;
-	myBikes = new ArrayList <Bike>();
+	myBikes = new ArrayList <Bike> ();
 	
-	Bike a = new Bike("red",12, 1000);
+	Bike a = new Bike("red",10, 1000);
 	myBikes.add (a);
-	Bike b = new Bike ("re", 12 , 10);
+	Bike b = new Bike ("yellow", 12 , 10);
 	myBikes.add (b);
-	Bike c = new Bike ("re", 12 , 10);
+	Bike c = new Bike ("pink", 12 , 10);
 	myBikes.add (c);
 	Bike d = new Bike ("re", 12 , 10);
 	myBikes.add (d);
