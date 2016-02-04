@@ -2,22 +2,20 @@ public class Bike {
 
 	private String color;
 	private int price;
-	private int size;
+	private int size;	
 	
-	
-
 public Bike (String color, int size){
-	this.color = color;
-	this.size = size;
+this.color = color;
+this.size = size;
 }
-public Bike (String color, int size, int price){
+
+public void addBike (String color, int size, int price){
 this.color= color;
 this.size = size;
 this.price = price;
 
 }
 		
-
 
 // metoder
 public String getColor(){

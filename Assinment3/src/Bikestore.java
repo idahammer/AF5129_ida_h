@@ -8,12 +8,12 @@ public class Bikestore {
 	public String getAllBikes(){
 		String s = "";
 		for (Bike bike : bikes) {
-			s = s + "color: "+ bike.getColor()+" size: "+ bike.getSize()+ "\n";
+			s = s + "color: "+ bike.getColor()+" size: "+ bike.getSize()+ "price:" + bike.getPrice() + "\n";
 		}
 		return s;
 	}
 	
-	public void addBike(Bike s){;
+	public void addBike(Bike s){
 	this.bikes.add(s);
 	}
 }
