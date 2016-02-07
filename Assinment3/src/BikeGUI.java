@@ -9,7 +9,6 @@ import javax.swing.JTextArea;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Random;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.JLabel;
@@ -18,13 +17,14 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 
 public class BikeGUI extends JFrame {
-	Random rand = new Random();
+	
+	
+	/** Instance variables */
 	private JPanel contentPane;
 	private JTextField textF1;
 	private JTextField textF2;
 	private JTextField textF3;
-	private static final String[] MY_COLORS = {"black", "yellow", "orange", "rainbow","blue"};
-
+	private BikeStore bikeAdd;
 	/**
 	 * Launch the application.
 	 */
@@ -45,6 +45,8 @@ public class BikeGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public BikeGUI() {
+		bikeAdd = new BikeStore();
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 377, 300);
 		contentPane = new JPanel();
@@ -71,13 +73,19 @@ public class BikeGUI extends JFrame {
 		JButton btnAddToList = new JButton("Add to list");
 		btnAddToList.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+/** If any of the textFileds don't have any value, write message:*/
 				if(textF1.getText().isEmpty() || textF2.getText().isEmpty() || textF3.getText().isEmpty()){
-					JOptionPane.showMessageDialog(null, "YOU NEED MORE VALUES!!");}
-				else {
-					textArea.append("BIKE = Color: " + textF1.getText() + " Size: "+ textF2.getText() + " Price: " + textF3.getText() +'\n');
-				}			
-			}		
-				});
+					JOptionPane.showMessageDialog(null, "Tilføj mere information!!");}	
+/** Else, bring all of the values to the textArea, and add them to the ArrayList getAllBikes() */
+				else{ 
+				String theColor = textF1.getText(); 					
+				int theSize = Integer.parseInt(textF2.getText()); 
+				int thePrice = Integer.parseInt(textF3.getText()); 		
+			    bikeAdd.addBike(theColor, theSize, thePrice); 		
+				textArea.setText(bikeAdd.getAllBikes()); 
+			}
+		}
+		});
 		
 		btnAddToList.setBounds(232, 96, 127, 29);
 		contentPane.add(btnAddToList);
@@ -101,7 +109,7 @@ public class BikeGUI extends JFrame {
 		lblColor.setBounds(16, 47, 61, 16);
 		contentPane.add(lblColor);
 		
-		JLabel lblSize = new JLabel("size");
+		JLabel lblSize = new JLabel("Size");
 		lblSize.setBounds(122, 47, 61, 16);
 		contentPane.add(lblSize);
 		
