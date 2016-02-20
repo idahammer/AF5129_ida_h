@@ -81,6 +81,7 @@ public class DigitalClockGUI extends JFrame {
 		alarmSet.setFont(new Font("Gill Sans Ultra Bold", Font.PLAIN, 11));
 		alarmSet.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//get text from the two textfields and set them as alarm
 				int clockHour;
 				int clockMinute;
 				try {
@@ -100,9 +101,12 @@ public class DigitalClockGUI extends JFrame {
 		alarmClear.setFont(new Font("Gill Sans Ultra Bold", Font.PLAIN, 11));
 		alarmClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//use the clear method to clear the alarm, set it back to "default"
 				clockLogic.clearAlarm();
 				infoLabel.setText("Set The Alarm");
 				urLabel.setForeground(new Color(0,0,0));
+				textHour.setText("");
+				textMin.setText("");
 			}
 		});
 		alarmClear.setBounds(239, 238, 109, 23);
@@ -129,6 +133,7 @@ public class DigitalClockGUI extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		Pic = new JLabel("New label");
+		//set background picture
 		Pic.setIcon(new ImageIcon("/Users/idahammeringerslev/Desktop/AF5129_ida_h/Assignment5/img/cat.jpeg"));
 		Pic.setBounds(0, 0, 348, 266);
 		contentPane.add(Pic);
@@ -142,8 +147,9 @@ public class DigitalClockGUI extends JFrame {
 		infoLabel.setText(alarmTime);
 	}
 
-	public void activateAlarm(Boolean activate) {
-		if(activate == true){
+	public void activateAlarm(Boolean start) {
+		if(start == true){
+			//if true start alarm else wait for it...
 			alarmInfo.setText("WAKE UP!!");
 			Toolkit.getDefaultToolkit().beep();
 			urLabel.setForeground(new Color(255,0,0));
