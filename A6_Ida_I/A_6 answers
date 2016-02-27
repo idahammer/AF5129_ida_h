@@ -1,0 +1,17 @@
+1. Mellan vilka stationer sker sökningen
+Søgningen sker mellem Malmö C og Lund C
+
+2. Hur ser en QueryString ut om man bara vill ha 5 resultatet för sökningen (Titta i xsd filen för sökningen)?
+Man skriver &NoOf=5
+
+3. Vilka delar av resan beskriver dessa taggar: <Journeys></Journeys>, <Journey></Jouney>,<RouteLinks></RouteLinks>,
+1. <Journeys> som indeholder rejserne
+2. <Journey> som er rejsen der findes
+3. <RouteLinks> Indeholder rejsens dele
+4. <RouteLink> Indeholder rejsens enkeltdele
+
+4. Vilken XML-tagg innehåller antal byte för en resa och under vilken huvudtagg är den taggen placerad?
+<NoOfChanges> placeret i Journey
+
+5. Ge exempel på en XML tagg som inte finns implementerad i det API du laddade ner.
+<PriceType> er ikke at findes i mit API
